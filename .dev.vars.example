@@ -1,0 +1,6 @@
+# Copy this file to .dev.vars for local development with `npm run dev`
+# NEVER commit your real .dev.vars file to Git!
+
+BOT_TOKEN=123456789:replace_with_your_telegram_bot_token
+WEBHOOK_SECRET=replace_with_a_random_secret_string
+ADMIN_IDS=123456789,987654321

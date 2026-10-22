@@ -1,0 +1,26 @@
+{
+  "name": "telegram-student-verification-bot",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Serverless trilingual Telegram student verification and group gatekeeper bot built with Cloudflare Workers and D1 SQLite.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/bot.test.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute student_verifier_db --local --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute student_verifier_db --remote --file=./schema.sql"
+  },
+  "keywords": [
+    "telegram-bot",
+    "cloudflare-workers",
+    "cloudflare-d1",
+    "sqlite",
+    "student-verification",
+    "i18n",
+    "arabic-rtl"
+  ],
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

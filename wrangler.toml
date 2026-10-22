@@ -1,0 +1,21 @@
+name = "telegram-student-verification-bot"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+COMMUNITY_NAME = "University Student Community"
+DEFAULT_SECTION = "General Section"
+
+# Cloudflare D1 Database Binding (Free Plan)
+# After creating your D1 database, replace PASTE_YOUR_D1_DATABASE_ID_HERE
+# with the database_id shown in your terminal.
+[[d1_databases]]
+binding = "DB"
+database_name = "student_verifier_db"
+database_id = "PASTE_YOUR_D1_DATABASE_ID_HERE"
+
+# Security Note: Do NOT put your BOT_TOKEN, WEBHOOK_SECRET, or ADMIN_IDS here!
+# Store them safely as encrypted Cloudflare secrets using:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put WEBHOOK_SECRET
+#   npx wrangler secret put ADMIN_IDS
